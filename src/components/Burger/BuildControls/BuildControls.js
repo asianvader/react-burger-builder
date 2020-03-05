@@ -14,6 +14,7 @@ const buildControls = (props) => (
         {controls.map(ctrl => (
             <BuildControl 
             added={() => props.ingredientAdded(ctrl.type)} //pass back type -> burgerbuilder
+            removed={() => props.ingredientRemoved(ctrl.type)}
             key={ctrl.label} label={ctrl.label}/>
         ))}
     </div>
