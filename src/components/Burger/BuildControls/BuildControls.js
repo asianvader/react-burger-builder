@@ -17,8 +17,12 @@ const buildControls = (props) => (
             added={() => props.ingredientAdded(ctrl.type)} //pass back type -> burgerbuilder
             removed={() => props.ingredientRemoved(ctrl.type)}
             key={ctrl.label} label={ctrl.label}
-            disabled={props.disabled[ctrl.type]}/>
+            disabled={props.disabled[ctrl.type]}
+            />
         ))}
+        <button className={styles.OrderButton}
+        disabled={!props.purchasable}
+        >ORDER NOW</button>
     </div>
 )
 
